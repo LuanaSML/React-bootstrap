@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site React</title>
+    
+    
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #282c34;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        
+        function Navbar() {
+            return (
+                <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#1a1d23' }}>
+                    <div className="container-fluid">
+                        <a className="navbar-brand" href="#" style={{ color: '#61DAFB', fontWeight: 'bold' }}>Meu Site React</a>
+                    </div>
+                </nav>
+            );
+        }
+
+    
+        function CardConteudo() {
+            const handleSaibaMais = () => {
+                alert('Obrigado pelo interesse! Este é um site desenvolvido com React e Bootstrap. Continue explorando para descobrir mais funcionalidades!');
+            };
+
+            return (
+                <div className="card" style={{ backgroundColor: '#3d4147', borderColor: '#61DAFB', borderWidth: '2px' }}>
+                    <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" 
+                        className="card-img-top" 
+                        alt="Logo do React"
+                        style={{ maxHeight: '300px', objectFit: 'contain', padding: '20px', backgroundColor: '#282c34' }}
+                    />
+                    <div className="card-body" style={{ backgroundColor: '#3d4147' }}>
+                        <h5 className="card-title" style={{ color: '#61DAFB' }}>Bem-vindo ao Meu Site React</h5>
+                        <p className="card-text" style={{ color: '#ffffff' }}>
+                            Este é um exemplo de página desenvolvida com React e Bootstrap. 
+                            Aqui você pode ver como os componentes React podem ser combinados 
+                            com as classes de estilização do Bootstrap para criar interfaces 
+                            modernas e responsivas.
+                        </p>
+                        <ol style={{ color: '#ffffff' }}>
+                            <li>React é uma biblioteca JavaScript para construir interfaces de usuário</li>
+                            <li>Bootstrap facilita a criação de layouts responsivos</li>
+                            <li>Componentes React permitem reutilização de código</li>
+                            <li>JSX torna a criação de elementos mais intuitiva</li>
+                            <li>CDN permite usar bibliotecas sem instalação local</li>
+                        </ol>
+                        <button 
+                            className="btn mt-3" 
+                            onClick={handleSaibaMais}
+                            style={{ backgroundColor: '#61DAFB', color: '#282c34', border: 'none', fontWeight: 'bold' }}
+                        >
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        
+        function Rodape() {
+            return (
+                <footer className="text-center p-3" style={{ backgroundColor: '#1a1d23', color: '#61DAFB' }}>
+                    © 2025 Meu Site React — Todos os direitos reservados.
+                </footer>
+            );
+        }
+
+        
+        function App() {
+            return (
+                <div style={{ minHeight: '100vh', backgroundColor: '#282c34' }}>
+                    <Navbar />
+                    <div className="container my-5">
+                        <CardConteudo />
+                    </div>
+                    <Rodape />
+                </div>
+            );
+        }
+
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
+
